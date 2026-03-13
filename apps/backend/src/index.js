@@ -13,5 +13,3 @@ const PORT = process.env.API_PORT || 3001;
 app.listen(PORT, () => {
   console.log(`Backend running on port ${PORT}`);
 });
-
-export default app;
