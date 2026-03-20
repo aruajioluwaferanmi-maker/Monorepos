@@ -1,0 +1,49 @@
+{
+  "heading": "Building Digital Experiences That Drive Results",
+  "subheading": "Full Stack Engineer & Product Builder",
+  "intro": "I design and build modern web applications that are fast, scalable, and user-focused. From frontend interfaces to backend systems and I deliver end-to-end solutions that create real business value.",
+  "profile": {
+    "name": "Oluwaferanmi Aruaji",
+    "role": "Full Stack Engineer",
+    "image": "/profile.jpg",
+    "badge": "Available for Work"
+  },
+  "ctas": {
+    "work": {
+      "label": "Work With Me",
+      "type": "modal",
+      "id": "work_with_me"
+    },
+    "connect": {
+      "label": "Connect With Me",
+      "type": "modal",
+      "id": "connect_with_me"
+    }
+  },
+  "modals": {
+    "work": {
+      "title": "Work With Me",
+      "subtitle": "Tell me about your project and let's build something great together.",
+      "submitLabel": "Send Project Brief",
+      "projectTypes": [
+        "Web Application",
+        "Mobile App",
+        "API Development",
+        "Consulting",
+        "Other"
+      ],
+      "budgets": [
+        "Under ₦100,000",
+        "₦100,000 - ₦500,000",
+        "₦500,000 - ₦1,000,000",
+        "₦1,000,000+"
+      ]
+    },
+    "connect": {
+      "title": "Connect With Me",
+      "subtitle": "Let's connect and grow our networks together.",
+      "submitLabel": "Send Message",
+      "platforms": ["LinkedIn", "Twitter / X", "GitHub", "Email", "Other"]
+    }
+  }
+}

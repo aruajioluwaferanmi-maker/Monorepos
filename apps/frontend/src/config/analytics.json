@@ -1,0 +1,37 @@
+{
+  "enabled": true,
+  "events": {
+    "page_view": {
+      "name": "page_view",
+      "description": "Fired when a page loads"
+    },
+    "cta_click": {
+      "name": "cta_click",
+      "description": "Fired when a CTA button is clicked"
+    },
+    "modal_open": {
+      "name": "modal_open",
+      "description": "Fired when a modal opens"
+    },
+    "modal_close": {
+      "name": "modal_close",
+      "description": "Fired when a modal closes"
+    },
+    "form_submit": {
+      "name": "form_submit",
+      "description": "Fired when a form is submitted"
+    },
+    "form_error": {
+      "name": "form_error",
+      "description": "Fired when form validation fails"
+    }
+  },
+  "cta_ids": {
+    "work_with_me": "cta_work_with_me",
+    "connect_with_me": "cta_connect_with_me"
+  },
+  "modal_ids": {
+    "work_modal": "modal_work_with_me",
+    "connect_modal": "modal_connect_with_me"
+  }
+}

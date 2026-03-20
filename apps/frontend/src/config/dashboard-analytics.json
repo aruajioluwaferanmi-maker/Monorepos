@@ -1,0 +1,52 @@
+{
+  "title": "Analytics Dashboard",
+  "subtitle": "Monitor user engagement and platform performance",
+  "refreshInterval": 30000,
+  "metrics": [
+    {
+      "id": "page_views",
+      "label": "Page Views",
+      "key": "page_views",
+      "icon": "👁️",
+      "color": "#2563eb",
+      "bgColor": "#eff6ff",
+      "description": "Total pages viewed this session"
+    },
+    {
+      "id": "cta_clicks",
+      "label": "CTA Clicks",
+      "key": "cta_clicks",
+      "icon": "🖱️",
+      "color": "#7c3aed",
+      "bgColor": "#f5f3ff",
+      "description": "Total CTA button clicks"
+    },
+    {
+      "id": "modal_opens",
+      "label": "Modal Opens",
+      "key": "modal_opens",
+      "icon": "📬",
+      "color": "#059669",
+      "bgColor": "#ecfdf5",
+      "description": "Total modal interactions"
+    },
+    {
+      "id": "modal_submits",
+      "label": "Form Submits",
+      "key": "modal_submits",
+      "icon": "✅",
+      "color": "#d97706",
+      "bgColor": "#fffbeb",
+      "description": "Total form submissions"
+    },
+    {
+      "id": "total_events",
+      "label": "Total Events",
+      "key": "total_events",
+      "icon": "📊",
+      "color": "#dc2626",
+      "bgColor": "#fef2f2",
+      "description": "All tracked events combined"
+    }
+  ]
+}

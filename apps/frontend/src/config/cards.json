@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "title": "Project Alpha",
+    "description": "My first dynamic project loaded from JSON config."
+  },
+  {
+    "id": 2,
+    "title": "Project Beta",
+    "description": "My second dynamic project loaded from JSON config."
+  },
+  {
+    "id": 3,
+    "title": "Project Gamma",
+    "description": "My third dynamic project loaded from JSON config."
+  }
+]
