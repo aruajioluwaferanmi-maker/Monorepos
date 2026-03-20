@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "componentType": "Card",
+    "title": "Project Alpha",
+    "description": "First project dynamically rendered from dashboard config.",
+    "onClickType": "modal"
+  },
+  {
+    "id": 2,
+    "componentType": "Card",
+    "title": "Project Beta",
+    "description": "Second project dynamically rendered from dashboard config.",
+    "onClickType": "modal"
+  },
+  {
+    "id": 3,
+    "componentType": "Card",
+    "title": "Project Gamma",
+    "description": "Third project dynamically rendered from dashboard config.",
+    "onClickType": "modal"
+  },
+  {
+    "id": 4,
+    "componentType": "InfoPanel",
+    "title": "📊 Stats",
+    "description": "You currently have 3 active projects.",
+    "onClickType": "none"
+  },
+  {
+    "id": 5,
+    "componentType": "InfoPanel",
+    "title": "🚀 Deployment",
+    "description": "Last deployment was successful. All systems running.",
+    "onClickType": "none"
+  }
+]
