@@ -28,10 +28,15 @@
   },
   "cta_ids": {
     "work_with_me": "cta_work_with_me",
-    "connect_with_me": "cta_connect_with_me"
+    "help_me_free": "cta_help_me_free",
+    "deliver_project": "cta_work_deliver_project",
+    "mentor_me": "cta_work_mentor_me",
+    "coffee_with_me": "cta_coffee_with_me"
   },
   "modal_ids": {
-    "work": "modal_work_with_me",
-    "connect": "modal_connect_with_me"
+    "deliver_project": "modal_deliver_project",
+    "mentor_me": "modal_mentor_me",
+    "coffee_with_me": "modal_coffee_with_me",
+    "help_me_free": "modal_help_me_free"
   }
 }

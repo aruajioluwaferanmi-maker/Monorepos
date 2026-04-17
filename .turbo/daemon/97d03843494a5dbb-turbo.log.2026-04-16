@@ -1,0 +1,60 @@
+2026-04-16T20:51:31.262791Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\cookies\\.turbo-cookie")}
+2026-04-16T20:51:31.263657Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2026-04-16T20:51:31.377749Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\cookies"), AnchoredSystemPathBuf(".turbo")}
+2026-04-16T20:51:31.377919Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2026-04-16T20:51:31.466996Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\cookies\\.turbo-cookie")}
+2026-04-16T20:51:31.467076Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2026-04-16T20:51:31.568570Z  WARN daemon_server: turborepo_lib::commands::daemon: daemon already running
+2026-04-16T20:51:31.743969Z  WARN daemon_server: turborepo_lib::commands::daemon: daemon already running
+2026-04-16T20:51:32.574357Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\97d03843494a5dbb-turbo.log.2026-04-16")}
+2026-04-16T20:51:32.574391Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2026-04-16T20:51:32.791248Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\97d03843494a5dbb-turbo.log.2026-04-16")}
+2026-04-16T20:51:32.791340Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2026-04-16T20:51:33.367282Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\cookies")}
+2026-04-16T20:51:33.367362Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2026-04-16T21:09:59.366580Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\frontend\\src\\components\\modals\\ConnectModal.tsx")}
+2026-04-16T21:09:59.366998Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("vite-project"), path: AnchoredSystemPathBuf("apps\\frontend") }}))
+2026-04-16T21:21:47.234310Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\frontend\\src\\types\\hero.types.ts")}
+2026-04-16T21:21:47.234385Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("vite-project"), path: AnchoredSystemPathBuf("apps\\frontend") }}))
+2026-04-16T21:21:54.872646Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\frontend\\src\\components\\modals\\ConnectModal.tsx")}
+2026-04-16T21:21:54.872791Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("vite-project"), path: AnchoredSystemPathBuf("apps\\frontend") }}))
+2026-04-16T21:23:56.465689Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\frontend\\src\\hooks\\useAnalytics.ts")}
+2026-04-16T21:23:56.465766Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("vite-project"), path: AnchoredSystemPathBuf("apps\\frontend") }}))
+2026-04-16T21:25:01.164091Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\frontend\\src\\hooks\\useAnalytics.ts")}
+2026-04-16T21:25:01.164239Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("vite-project"), path: AnchoredSystemPathBuf("apps\\frontend") }}))
+2026-04-16T21:30:10.867514Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\97d03843494a5dbb-turbo.log.2026-04-16")}
+2026-04-16T21:30:10.867586Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2026-04-16T21:30:26.366967Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\frontend\\src\\pages\\HomePage.tsx")}
+2026-04-16T21:30:26.367217Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("vite-project"), path: AnchoredSystemPathBuf("apps\\frontend") }}))
+2026-04-16T21:31:27.071661Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\frontend\\src\\pages\\HomePage.tsx")}
+2026-04-16T21:31:27.071708Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("vite-project"), path: AnchoredSystemPathBuf("apps\\frontend") }}))
+2026-04-16T21:31:27.818953Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\frontend\\src\\pages\\HomePage.tsx")}
+2026-04-16T21:31:27.818990Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("vite-project"), path: AnchoredSystemPathBuf("apps\\frontend") }}))
+2026-04-16T21:31:27.819114Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2026-04-16T21:31:39.166479Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\frontend\\src\\pages\\HomePage.tsx")}
+2026-04-16T21:31:39.166573Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("vite-project"), path: AnchoredSystemPathBuf("apps\\frontend") }}))
+2026-04-16T21:32:23.567742Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\frontend\\src\\pages\\HomePage.tsx")}
+2026-04-16T21:32:23.567784Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("vite-project"), path: AnchoredSystemPathBuf("apps\\frontend") }}))
+2026-04-16T21:32:38.263666Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\frontend\\src\\pages\\HomePage.tsx")}
+2026-04-16T21:32:38.263788Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("vite-project"), path: AnchoredSystemPathBuf("apps\\frontend") }}))
+2026-04-16T21:32:39.084972Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2026-04-16T22:00:23.964147Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\97d03843494a5dbb-turbo.log.2026-04-16")}
+2026-04-16T22:00:23.964210Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2026-04-16T22:01:20.666305Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\frontend\\src\\App.tsx")}
+2026-04-16T22:01:20.666428Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("vite-project"), path: AnchoredSystemPathBuf("apps\\frontend") }}))
+2026-04-16T22:03:36.192630Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\frontend\\src\\App.tsx")}
+2026-04-16T22:03:36.192706Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("vite-project"), path: AnchoredSystemPathBuf("apps\\frontend") }}))
+2026-04-16T22:04:03.371299Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\frontend\\src\\App.tsx")}
+2026-04-16T22:04:03.371337Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("vite-project"), path: AnchoredSystemPathBuf("apps\\frontend") }}))
+2026-04-16T22:04:07.571660Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\frontend\\src\\App.tsx")}
+2026-04-16T22:04:07.571700Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("vite-project"), path: AnchoredSystemPathBuf("apps\\frontend") }}))
+2026-04-16T22:04:08.120778Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2026-04-16T22:04:28.782179Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\frontend\\src\\App.tsx")}
+2026-04-16T22:04:28.782218Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("vite-project"), path: AnchoredSystemPathBuf("apps\\frontend") }}))
+2026-04-16T22:05:49.565933Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\frontend\\src\\pages\\admin\\AnalyticsDashboard.tsx")}
+2026-04-16T22:05:49.565970Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("vite-project"), path: AnchoredSystemPathBuf("apps\\frontend") }}))
+2026-04-16T22:06:06.563944Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\frontend\\src\\pages\\admin\\AnalyticsDashboard.tsx")}
+2026-04-16T22:06:06.563993Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("vite-project"), path: AnchoredSystemPathBuf("apps\\frontend") }}))
+2026-04-16T22:32:25.570397Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps\\frontend\\src\\pages\\admin\\AnalyticsDashboard.tsx")}
+2026-04-16T22:32:25.570520Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("vite-project"), path: AnchoredSystemPathBuf("apps\\frontend") }}))
+2026-04-16T22:32:26.375075Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun

@@ -6,44 +6,142 @@
     "name": "Oluwaferanmi Aruaji",
     "role": "Full Stack Engineer",
     "image": "/profile.jpg",
-    "badge": "Available for Work"
+    "badge": "Available for Work",
+    "stats": [
+      { "label": "Projects", "value": "5+" },
+      { "label": "Years Exp", "value": "3+" },
+      { "label": "Clients", "value": "10+" }
+    ]
   },
+  "funFacts": [
+    { "emoji": "☕", "text": "Powered by coffee and clean code" },
+    { "emoji": "🌍", "text": "Building products used across 3 continents" },
+    { "emoji": "🎯", "text": "Obsessed with performance and user experience" },
+    { "emoji": "🚀", "text": "Shipped 5+ production apps this year" }
+  ],
   "ctas": {
-    "work": {
+    "workWithMe": {
       "label": "Work With Me",
-      "type": "modal",
-      "id": "work_with_me"
+      "type": "dropdown",
+      "id": "work_with_me",
+      "variant": "primary"
     },
-    "connect": {
-      "label": "Connect With Me",
-      "type": "modal",
-      "id": "connect_with_me"
+    "helpMeFree": {
+      "label": "Help Me Free",
+      "type": "dropdown",
+      "id": "help_me_free",
+      "variant": "secondary"
     }
   },
   "modals": {
-    "work": {
-      "title": "Work With Me",
+    "deliverProject": {
+      "title": "Deliver a Project",
       "subtitle": "Tell me about your project and let's build something great together.",
       "submitLabel": "Send Project Brief",
       "projectTypes": [
         "Web Application",
         "Mobile App",
         "API Development",
-        "Consulting",
+        "E-commerce",
         "Other"
       ],
       "budgets": [
-        "Under ₦100,000",
-        "₦100,000 - ₦500,000",
-        "₦500,000 - ₦1,000,000",
-        "₦1,000,000+"
+        "Under $1,000",
+        "$1,000 - $5,000",
+        "$5,000 - $10,000",
+        "$10,000+"
       ]
     },
-    "connect": {
-      "title": "Connect With Me",
-      "subtitle": "Let's connect and grow our networks together.",
-      "submitLabel": "Send Message",
-      "platforms": ["LinkedIn", "Twitter / X", "GitHub", "Email", "Other"]
+    "mentorMe": {
+      "title": "Mentor Me",
+      "subtitle": "Let's work together on your growth as an engineer or product builder.",
+      "submitLabel": "Request Mentorship",
+      "mentoringAreas": [
+        "Frontend Development",
+        "Backend Development",
+        "Full Stack",
+        "Product Thinking",
+        "Career Growth",
+        "Other"
+      ],
+      "availability": [
+        "Weekday mornings",
+        "Weekday evenings",
+        "Weekends",
+        "Flexible"
+      ]
+    },
+    "coffeeWithMe": {
+      "title": "Coffee With Me",
+      "subtitle": "Let's have a casual chat — no agenda, just good conversation.",
+      "submitLabel": "Book a Coffee Chat",
+      "topics": [
+        "Tech & Engineering",
+        "Product & Startups",
+        "Career Advice",
+        "Collaboration",
+        "Just Networking",
+        "Other"
+      ],
+      "preferredTimes": [
+        "Morning (8am - 12pm)",
+        "Afternoon (12pm - 5pm)",
+        "Evening (5pm - 9pm)",
+        "Flexible"
+      ]
+    },
+    "fifteenMinChat": {
+      "title": "15 Minutes Chat",
+      "subtitle": "Got a quick question? Let's jump on a free 15 minute call.",
+      "submitLabel": "Book My 15 Mins",
+      "topics": [
+        "Tech Question",
+        "Career Advice",
+        "Project Feedback",
+        "Just Exploring",
+        "Other"
+      ],
+      "availability": [
+        "Weekday mornings",
+        "Weekday evenings",
+        "Weekends",
+        "Flexible"
+      ]
+    },
+    "auditWebsite": {
+      "title": "Audit My Website",
+      "subtitle": "I will review your website and give you honest, actionable feedback — for free.",
+      "submitLabel": "Request Free Audit",
+      "websiteTypes": [
+        "Portfolio",
+        "Business Website",
+        "E-commerce",
+        "Blog",
+        "SaaS Product",
+        "Other"
+      ],
+      "auditAreas": [
+        "Performance & Speed",
+        "UI & Design",
+        "SEO",
+        "Accessibility",
+        "Code Quality",
+        "All of the above"
+      ]
+    },
+    "techCatchUp": {
+      "title": "1-2-Many Tech Catch Up",
+      "subtitle": "Join a group tech session where we discuss, learn and grow together.",
+      "submitLabel": "Join the Catch Up",
+      "catchUpTopics": [
+        "Frontend Development",
+        "Backend Development",
+        "Full Stack",
+        "DevOps & Deployment",
+        "Product & Strategy",
+        "Open Discussion"
+      ],
+      "groupSizes": ["Just me (1-1)", "Small group (2-5)", "Open group (5+)"]
     }
   }
 }

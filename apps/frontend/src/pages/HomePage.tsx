@@ -1,74 +1,39 @@
-// import React, { useState } from "react";
-// import HeroSection from "../components/hero/HeroSection";
-
-// const HomePage: React.FC = () => {
-//   const [workModalOpen, setWorkModalOpen] = useState(false);
-//   const [connectModalOpen, setConnectModalOpen] = useState(false);
-
-//   return (
-//     <main>
-//       <HeroSection
-//         onWorkClick={() => setWorkModalOpen(true)}
-//         onConnectClick={() => setConnectModalOpen(true)}
-//       />
-
-//       {/* Modals coming Day 2 */}
-//       {workModalOpen && (
-//         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-//           <div className="bg-white rounded-2xl p-8 max-w-md w-full mx-4">
-//             <h2 className="text-2xl font-bold mb-4">Work With Me</h2>
-//             <p className="text-gray-600 mb-6">Modal coming in Day 2!</p>
-//             <button
-//               onClick={() => setWorkModalOpen(false)}
-//               className="bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition w-full"
-//             >
-//               Close
-//             </button>
-//           </div>
-//         </div>
-//       )}
-
-//       {connectModalOpen && (
-//         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-//           <div className="bg-white rounded-2xl p-8 max-w-md w-full mx-4">
-//             <h2 className="text-2xl font-bold mb-4">Connect With Me</h2>
-//             <p className="text-gray-600 mb-6">Modal coming in Day 2!</p>
-//             <button
-//               onClick={() => setConnectModalOpen(false)}
-//               className="bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition w-full"
-//             >
-//               Close
-//             </button>
-//           </div>
-//         </div>
-//       )}
-//     </main>
-//   );
-// };
-
-// export default HomePage;
-
 import React, { useState, useEffect } from "react";
 import HeroSection from "../components/hero/HeroSection";
-import WorkModal from "../components/modals/WorkModal";
-import ConnectModal from "../components/modals/ConnectModal";
+import DeliverProjectModal from "../components/modals/DeliveryProjectModal";
+import MentorMeModal from "../components/modals/MentorMeModal";
+import CoffeeWithMeModal from "../components/modals/CoffeeWithMeModal";
+import FifteenMinChatModal from "../components/modals/FifteenMinChatModal";
+import AuditWebsiteModal from "../components/modals/AuditWebsiteModal";
+import TechCatchUpModal from "../components/modals/TechCatchUpModal";
 import { HeroConfig } from "../types/hero.types";
 import { usePageView, useAnalytics } from "../hooks/useAnalytics";
 
 const HomePage: React.FC = () => {
   const [config, setConfig] = useState<HeroConfig | null>(null);
-  const [workOpen, setWorkOpen] = useState(false);
-  const [connectOpen, setConnectOpen] = useState(false);
 
-  // Track page view on mount
+  // Work With Me modal states
+  const [deliverOpen, setDeliverOpen] = useState(false);
+  const [mentorOpen, setMentorOpen] = useState(false);
+  const [coffeeOpen, setCoffeeOpen] = useState(false);
+
+  // Help Me Free modal states
+  const [fifteenOpen, setFifteenOpen] = useState(false);
+  const [auditOpen, setAuditOpen] = useState(false);
+  const [catchUpOpen, setCatchUpOpen] = useState(false);
+
+  // Slice 11 — Page view on mount
   usePageView("home_page");
 
-  // Analytics actions
   const {
-    logCTAClick,
+    logWorkWithMeClick,
+    logHelpMeFreeClick,
+    logDeliverProjectClick,
+    logMentorMeClick,
+    logCoffeeWithMeClick,
     logModalOpen,
     logModalClose,
-    logFormSubmit,
+    logModalSubmit,
     logFormError,
   } = useAnalytics();
 
@@ -78,72 +43,166 @@ const HomePage: React.FC = () => {
     });
   }, []);
 
-  // Work With Me handlers
-  const handleWorkClick = () => {
-    logCTAClick("cta_work_with_me");
-    logModalOpen("modal_work_with_me");
-    setConnectOpen(false);
-    setWorkOpen(true);
+  // Close all modals
+  const closeAll = () => {
+    setDeliverOpen(false);
+    setMentorOpen(false);
+    setCoffeeOpen(false);
+    setFifteenOpen(false);
+    setAuditOpen(false);
+    setCatchUpOpen(false);
   };
 
-  const handleWorkClose = () => {
-    logModalClose("modal_work_with_me");
-    setWorkOpen(false);
+  // ── Work With Me handlers ──
+
+  // Slice 6
+  const handleWorkWithMeClick = () => {
+    logWorkWithMeClick();
   };
 
-  const handleWorkSubmit = () => {
-    logFormSubmit("modal_work_with_me");
+  // Slice 8
+  const handleDeliverProject = () => {
+    closeAll();
+    logDeliverProjectClick();
+    logModalOpen("modal_deliver_project");
+    setDeliverOpen(true);
   };
 
-  const handleWorkError = () => {
-    logFormError("modal_work_with_me");
+  // Slice 9
+  const handleMentorMe = () => {
+    closeAll();
+    logMentorMeClick();
+    logModalOpen("modal_mentor_me");
+    setMentorOpen(true);
   };
 
-  // Connect With Me handlers
-  const handleConnectClick = () => {
-    logCTAClick("cta_connect_with_me");
-    logModalOpen("modal_connect_with_me");
-    setWorkOpen(false);
-    setConnectOpen(true);
+  // Slice 10
+  const handleCoffeeWithMe = () => {
+    closeAll();
+    logCoffeeWithMeClick();
+    logModalOpen("modal_coffee_with_me");
+    setCoffeeOpen(true);
   };
 
-  const handleConnectClose = () => {
-    logModalClose("modal_connect_with_me");
-    setConnectOpen(false);
+  // ── Help Me Free handlers ──
+
+  // Slice 7
+  const handleHelpMeFreeClick = () => {
+    logHelpMeFreeClick();
   };
 
-  const handleConnectSubmit = () => {
-    logFormSubmit("modal_connect_with_me");
+  // Slice 5A
+  const handleFifteenMinChat = () => {
+    closeAll();
+    logModalOpen("modal_fifteen_min_chat");
+    setFifteenOpen(true);
   };
 
-  const handleConnectError = () => {
-    logFormError("modal_connect_with_me");
+  // Slice 5B
+  const handleAuditWebsite = () => {
+    closeAll();
+    logModalOpen("modal_audit_website");
+    setAuditOpen(true);
+  };
+
+  // Slice 5C
+  const handleTechCatchUp = () => {
+    closeAll();
+    logModalOpen("modal_tech_catch_up");
+    setCatchUpOpen(true);
   };
 
   return (
     <main>
+      {/* Hero Section */}
       <HeroSection
-        onWorkClick={handleWorkClick}
-        onConnectClick={handleConnectClick}
+        onWorkWithMeClick={handleWorkWithMeClick}
+        onDeliverProject={handleDeliverProject}
+        onMentorMe={handleMentorMe}
+        onCoffeeWithMe={handleCoffeeWithMe}
+        onHelpMeFreeClick={handleHelpMeFreeClick}
+        onFifteenMinChat={handleFifteenMinChat}
+        onAuditWebsite={handleAuditWebsite}
+        onTechCatchUp={handleTechCatchUp}
       />
 
+      {/* ── Work With Me Modals ── */}
       {config && (
-        <WorkModal
-          open={workOpen}
-          onClose={handleWorkClose}
-          onSubmit={handleWorkSubmit}
-          onError={handleWorkError}
-          config={(config as any).modals.work}
+        <DeliverProjectModal
+          open={deliverOpen}
+          onClose={() => {
+            logModalClose("modal_deliver_project");
+            setDeliverOpen(false);
+          }}
+          onSubmit={() => logModalSubmit("modal_deliver_project")}
+          onError={() => logFormError("modal_deliver_project")}
+          config={config.modals.deliverProject}
         />
       )}
 
       {config && (
-        <ConnectModal
-          open={connectOpen}
-          onClose={handleConnectClose}
-          onSubmit={handleConnectSubmit}
-          onError={handleConnectError}
-          config={(config as any).modals.connect}
+        <MentorMeModal
+          open={mentorOpen}
+          onClose={() => {
+            logModalClose("modal_mentor_me");
+            setMentorOpen(false);
+          }}
+          onSubmit={() => logModalSubmit("modal_mentor_me")}
+          onError={() => logFormError("modal_mentor_me")}
+          config={config.modals.mentorMe}
+        />
+      )}
+
+      {config && (
+        <CoffeeWithMeModal
+          open={coffeeOpen}
+          onClose={() => {
+            logModalClose("modal_coffee_with_me");
+            setCoffeeOpen(false);
+          }}
+          onSubmit={() => logModalSubmit("modal_coffee_with_me")}
+          onError={() => logFormError("modal_coffee_with_me")}
+          config={config.modals.coffeeWithMe}
+        />
+      )}
+
+      {/* ── Help Me Free Modals ── */}
+      {config && (
+        <FifteenMinChatModal
+          open={fifteenOpen}
+          onClose={() => {
+            logModalClose("modal_fifteen_min_chat");
+            setFifteenOpen(false);
+          }}
+          onSubmit={() => logModalSubmit("modal_fifteen_min_chat")}
+          onError={() => logFormError("modal_fifteen_min_chat")}
+          config={config.modals.fifteenMinChat}
+        />
+      )}
+
+      {config && (
+        <AuditWebsiteModal
+          open={auditOpen}
+          onClose={() => {
+            logModalClose("modal_audit_website");
+            setAuditOpen(false);
+          }}
+          onSubmit={() => logModalSubmit("modal_audit_website")}
+          onError={() => logFormError("modal_audit_website")}
+          config={config.modals.auditWebsite}
+        />
+      )}
+
+      {config && (
+        <TechCatchUpModal
+          open={catchUpOpen}
+          onClose={() => {
+            logModalClose("modal_tech_catch_up");
+            setCatchUpOpen(false);
+          }}
+          onSubmit={() => logModalSubmit("modal_tech_catch_up")}
+          onError={() => logFormError("modal_tech_catch_up")}
+          config={config.modals.techCatchUp}
         />
       )}
     </main>

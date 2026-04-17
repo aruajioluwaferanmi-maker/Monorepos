@@ -82,7 +82,7 @@ const AnalyticsDashboard: React.FC = () => {
   const modalRate = summary ? calculateModalRate(summary) : "0%";
 
   return (
-    <div className="min-h-screen bg-gray-50 p-6 lg:p-8">
+    <div className="min-h-screen bg-gray-50 p-6 lg:p-8 mt-7">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         {config && (
