@@ -4,13 +4,25 @@ import ProfileCard from "./ProfileCard";
 import { HeroConfig } from "../../types/hero.types";
 
 interface HeroSectionProps {
-  onWorkClick: () => void;
-  onConnectClick: () => void;
+  onDeliverProject: () => void;
+  onMentorMe: () => void;
+  onCoffeeWithMe: () => void;
+  onFifteenMinChat: () => void;
+  onAuditWebsite: () => void;
+  onTechCatchUp: () => void;
+  onWorkWithMeClick: () => void;
+  onHelpMeFreeClick: () => void;
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({
-  onWorkClick,
-  onConnectClick,
+  onDeliverProject,
+  onMentorMe,
+  onCoffeeWithMe,
+  onFifteenMinChat,
+  onAuditWebsite,
+  onTechCatchUp,
+  onWorkWithMeClick,
+  onHelpMeFreeClick,
 }) => {
   const [config, setConfig] = useState<HeroConfig | null>(null);
   const [loading, setLoading] = useState(true);
@@ -22,24 +34,26 @@ const HeroSection: React.FC<HeroSectionProps> = ({
     });
   }, []);
 
-  // Skeleton loader while config loads
   if (loading) {
     return (
-      <section className="min-h-screen bg-gradient-to-br from-blue-50 to-white flex items-center">
-        <div className="container mx-auto px-6 py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="flex flex-col gap-4 animate-pulse">
-              <div className="h-6 bg-gray-200 rounded-full w-48" />
-              <div className="h-12 bg-gray-200 rounded-xl w-full" />
-              <div className="h-12 bg-gray-200 rounded-xl w-3/4" />
-              <div className="h-4 bg-gray-200 rounded w-full" />
-              <div className="h-4 bg-gray-200 rounded w-5/6" />
-              <div className="flex gap-4 mt-4">
-                <div className="h-12 bg-gray-200 rounded-xl w-40" />
-                <div className="h-12 bg-gray-200 rounded-xl w-40" />
+      <section className="min-h-screen bg-white pt-16">
+        <div className="w-full max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div className="flex flex-col gap-4 animate-pulse pt-16 lg:pt-20">
+              <div className="h-5 bg-gray-100 rounded-full w-52" />
+              <div className="h-14 bg-gray-100 rounded-xl w-full" />
+              <div className="h-14 bg-gray-100 rounded-xl w-4/5" />
+              <div className="h-4 bg-gray-100 rounded w-full" />
+              <div className="h-4 bg-gray-100 rounded w-5/6" />
+              <div className="flex gap-3 mt-2">
+                <div className="h-12 bg-gray-100 rounded-xl w-44" />
+                <div className="h-12 bg-gray-100 rounded-xl w-36" />
               </div>
             </div>
-            <div className="h-96 bg-gray-200 rounded-2xl animate-pulse" />
+            <div className="flex flex-col gap-4 pt-10 lg:pt-14">
+              <div className="h-80 bg-gray-100 rounded-2xl animate-pulse" />
+              <div className="h-48 bg-gray-100 rounded-2xl animate-pulse" />
+            </div>
           </div>
         </div>
       </section>
@@ -49,30 +63,44 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   if (!config) return null;
 
   return (
-    <section
-      className="
-      min-h-screen
-      bg-gradient-to-br from-blue-50 via-white to-indigo-50
-      flex items-center
-    "
-    >
-      <div className="container mx-auto px-6 py-20">
+    <section className="min-h-screen bg-white pt-16">
+      <div className="w-full max-w-7xl mx-auto px-6">
         <div
           className="
           grid grid-cols-1 lg:grid-cols-2
-          gap-16 items-center
+          gap-12 lg:gap-16
+          items-start
         "
         >
-          {/* Left — Hero Text */}
-          <HeroText
-            config={config}
-            onWorkClick={onWorkClick}
-            onConnectClick={onConnectClick}
-          />
+          {/* Left */}
+          <div
+            className="
+            flex flex-col justify-start
+            pt-16 lg:pt-20 pb-12
+          "
+          >
+            <HeroText
+              config={config}
+              onDeliverProject={onDeliverProject}
+              onMentorMe={onMentorMe}
+              onCoffeeWithMe={onCoffeeWithMe}
+              onFifteenMinChat={onFifteenMinChat}
+              onAuditWebsite={onAuditWebsite}
+              onTechCatchUp={onTechCatchUp}
+              onWorkWithMeClick={onWorkWithMeClick}
+              onHelpMeFreeClick={onHelpMeFreeClick}
+            />
+          </div>
 
-          {/* Right — Profile Card */}
-          <div className="flex justify-center lg:justify-end">
-            <ProfileCard profile={config.profile} />
+          {/* Right */}
+          <div
+            className="
+            flex flex-col
+            pt-10 lg:pt-14 pb-12
+            gap-5
+          "
+          >
+            <ProfileCard profile={config.profile} funFacts={config.funFacts} />
           </div>
         </div>
       </div>

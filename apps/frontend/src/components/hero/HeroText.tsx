@@ -1,103 +1,85 @@
 import React from "react";
-import { Button } from "@mui/material";
 import { HeroConfig } from "../../types/hero.types";
+import WorkWithMeDropdown from "./WorkWithMeDropdown";
+import HelpMeFreeDropdown from "./HelpMeFreeDropdown";
 
 interface HeroTextProps {
   config: HeroConfig;
-  onWorkClick: () => void;
-  onConnectClick: () => void;
+  onDeliverProject: () => void;
+  onMentorMe: () => void;
+  onCoffeeWithMe: () => void;
+  onFifteenMinChat: () => void;
+  onAuditWebsite: () => void;
+  onTechCatchUp: () => void;
+  onWorkWithMeClick: () => void;
+  onHelpMeFreeClick: () => void;
 }
 
 const HeroText: React.FC<HeroTextProps> = ({
   config,
-  onWorkClick,
-  onConnectClick,
+  onDeliverProject,
+  onMentorMe,
+  onCoffeeWithMe,
+  onFifteenMinChat,
+  onAuditWebsite,
+  onTechCatchUp,
+  onWorkWithMeClick,
+  onHelpMeFreeClick,
 }) => {
   return (
-    <div className="flex flex-col gap-6 justify-center">
+    <div className="flex flex-col gap-4">
       {/* Subheading Badge */}
       <span
         className="
-        inline-block w-fit
+        inline-flex items-center w-fit
         bg-blue-50 text-blue-600
         text-sm font-semibold
-        px-4 py-2 rounded-full
-        border border-blue-200
+        px-4 py-1.5 rounded-full
+        border border-blue-100
       "
       >
         {config.subheading}
       </span>
 
-      {/* Main Heading */}
+      {/* Heading */}
       <h1
         className="
-        text-4xl lg:text-5xl
-        font-extrabold
-        text-gray-900
-        leading-tight
+        text-4xl lg:text-5xl xl:text-6xl
+        font-extrabold text-gray-900
+        leading-[1.1] tracking-tight
       "
       >
         {config.heading}
       </h1>
 
-      {/* Intro Paragraph */}
+      {/* Intro */}
       <p
         className="
-        text-lg text-gray-600
-        leading-relaxed
-        max-w-xl
+        text-base lg:text-lg
+        text-gray-500 leading-relaxed
+        max-w-lg
       "
       >
         {config.intro}
       </p>
 
-      {/* CTA Buttons */}
-      <div className="flex flex-wrap gap-4 mt-2">
-        <Button
-          variant="contained"
-          size="large"
-          onClick={onWorkClick}
-          sx={{
-            backgroundColor: "#2563eb",
-            borderRadius: "12px",
-            padding: "12px 28px",
-            fontWeight: 700,
-            textTransform: "none",
-            fontSize: "1rem",
-            "&:hover": {
-              backgroundColor: "#1d4ed8",
-              transform: "translateY(-2px)",
-              boxShadow: "0 8px 25px rgba(37, 99, 235, 0.4)",
-            },
-            transition: "all 0.2s ease",
-          }}
-        >
-          {config.ctas.work.label}
-        </Button>
+      {/* CTAs */}
+      <div className="flex flex-wrap items-center gap-3 pt-1">
+        {/* Work With Me Dropdown */}
+        <WorkWithMeDropdown
+          onDeliverProject={onDeliverProject}
+          onMentorMe={onMentorMe}
+          onCoffeeWithMe={onCoffeeWithMe}
+          onDropdownClick={onWorkWithMeClick}
+        />
 
-        <Button
-          variant="outlined"
-          size="large"
-          onClick={onConnectClick}
-          sx={{
-            borderColor: "#2563eb",
-            color: "#2563eb",
-            borderRadius: "12px",
-            padding: "12px 28px",
-            fontWeight: 700,
-            textTransform: "none",
-            fontSize: "1rem",
-            borderWidth: "2px",
-            "&:hover": {
-              borderColor: "#1d4ed8",
-              backgroundColor: "#eff6ff",
-              transform: "translateY(-2px)",
-            },
-            transition: "all 0.2s ease",
-          }}
-        >
-          {config.ctas.connect.label}
-        </Button>
+        {/* Help Me Free Dropdown */}
+        <HelpMeFreeDropdown
+          onFifteenMinChat={onFifteenMinChat}
+          onAuditWebsite={onAuditWebsite}
+          onTechCatchUp={onTechCatchUp}
+          onDropdownClick={onHelpMeFreeClick}
+        />
       </div>
     </div>
   );
