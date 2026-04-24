@@ -1,0 +1,23 @@
+{
+  "name": "Oluwaferanmi Aruaji",
+  "initials": "OA",
+  "tagline": "Building digital experiences that drive results.",
+  "copyright": "Oluwaferanmi Aruaji. All rights reserved.",
+  "socials": [
+    {
+      "label": "LinkedIn",
+      "href": "https://linkedin.com/in/your-username",
+      "icon": "linkedin"
+    },
+    {
+      "label": "Instagram",
+      "href": "https://instagram.com/your-username",
+      "icon": "instagram"
+    },
+    {
+      "label": "GitHub",
+      "href": "https://github.com/your-username",
+      "icon": "github"
+    }
+  ]
+}

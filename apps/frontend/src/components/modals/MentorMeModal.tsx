@@ -3,6 +3,7 @@ import BaseModal from "./BaseModal";
 import FormInput from "../ui/FormInput";
 import FormSelect from "../ui/FormSelect";
 import FormTextarea from "../ui/FormTextarea";
+import PricingCards from "../ui/PricingCards";
 import { MentorModalFormData, MentorModalConfig } from "../../types/hero.types";
 
 interface MentorMeModalProps {
@@ -12,6 +13,8 @@ interface MentorMeModalProps {
   onError?: () => void;
   config: MentorModalConfig;
 }
+
+type Step = "pricing" | "form";
 
 const initialForm: MentorModalFormData = {
   name: "",
@@ -28,10 +31,22 @@ const MentorMeModal: React.FC<MentorMeModalProps> = ({
   onError,
   config,
 }) => {
+  const [step, setStep] = useState<Step>("pricing");
+  const [selectedTier, setSelectedTier] = useState("");
+  const [tierError, setTierError] = useState(false);
   const [form, setForm] = useState<MentorModalFormData>(initialForm);
   const [errors, setErrors] = useState<Partial<MentorModalFormData>>({});
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  const handleTierContinue = () => {
+    if (!selectedTier) {
+      setTierError(true);
+      return;
+    }
+    setTierError(false);
+    setStep("form");
+  };
 
   const validate = (): boolean => {
     const newErrors: Partial<MentorModalFormData> = {};
@@ -61,21 +76,27 @@ const MentorMeModal: React.FC<MentorMeModalProps> = ({
     setLoading(false);
     setSubmitted(true);
     setTimeout(() => {
-      setForm(initialForm);
-      setSubmitted(false);
+      resetAll();
       onClose();
     }, 3000);
   };
 
-  const handleClose = () => {
+  const resetAll = () => {
+    setStep("pricing");
+    setSelectedTier("");
+    setTierError(false);
     setForm(initialForm);
     setErrors({});
     setSubmitted(false);
+  };
+
+  const handleClose = () => {
+    resetAll();
     onClose();
   };
 
   return (
-    <BaseModal open={open} onClose={handleClose}>
+    <BaseModal open={open} onClose={handleClose} maxWidth="max-w-2xl">
       <div className="p-8">
         {submitted ? (
           <div className="flex flex-col items-center gap-4 py-8 text-center">
@@ -87,7 +108,7 @@ const MentorMeModal: React.FC<MentorMeModalProps> = ({
               Excited to work with you. I will be in touch shortly!
             </p>
           </div>
-        ) : (
+        ) : step === "pricing" ? (
           <>
             <div className="mb-6 pr-8">
               <div className="flex items-center gap-3 mb-2">
@@ -97,6 +118,53 @@ const MentorMeModal: React.FC<MentorMeModalProps> = ({
                 </h2>
               </div>
               <p className="text-gray-500 text-sm">{config.subtitle}</p>
+            </div>
+
+            <PricingCards
+              tiers={config.pricing}
+              selectedTier={selectedTier}
+              onSelect={(tier) => {
+                setSelectedTier(tier);
+                setTierError(false);
+              }}
+            />
+
+            {tierError && (
+              <p className="text-red-500 text-xs mt-2">
+                Please select a plan to continue
+              </p>
+            )}
+
+            <button
+              onClick={handleTierContinue}
+              className="
+                w-full mt-6 py-4 rounded-xl
+                bg-blue-600 hover:bg-blue-700
+                text-white font-bold text-sm
+                transition-all duration-200
+                hover:shadow-lg hover:-translate-y-0.5
+              "
+            >
+              Continue with {selectedTier || "a Plan"} →
+            </button>
+          </>
+        ) : (
+          <>
+            <button
+              onClick={() => setStep("pricing")}
+              className="flex items-center gap-2 text-sm text-gray-400 hover:text-blue-600 transition-colors mb-6 bg-transparent border-none cursor-pointer"
+            >
+              ← Back to plans
+            </button>
+
+            <div className="flex items-center gap-3 mb-6 pr-8">
+              <span className="text-2xl">🎓</span>
+              <h2 className="text-2xl font-bold text-gray-800">
+                {config.title}
+              </h2>
+              <span className="ml-auto bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">
+                {selectedTier} Plan
+              </span>
             </div>
 
             <div className="flex flex-col gap-4">
@@ -139,7 +207,7 @@ const MentorMeModal: React.FC<MentorMeModalProps> = ({
                 label="Your Goals"
                 value={form.goals}
                 onChange={(v) => setForm({ ...form, goals: v })}
-                placeholder="What do you want to achieve through mentorship? Where are you now and where do you want to be?"
+                placeholder="What do you want to achieve through mentorship?"
                 required
                 error={errors.goals}
               />
@@ -147,15 +215,7 @@ const MentorMeModal: React.FC<MentorMeModalProps> = ({
               <button
                 onClick={handleSubmit}
                 disabled={loading}
-                className={`
-                  w-full py-4 rounded-xl font-bold
-                  text-white text-sm transition-all duration-200
-                  ${
-                    loading
-                      ? "bg-blue-400 cursor-not-allowed"
-                      : "bg-blue-600 hover:bg-blue-700 hover:shadow-lg hover:-translate-y-0.5"
-                  }
-                `}
+                className={`w-full py-4 rounded-xl font-bold text-white text-sm transition-all duration-200 ${loading ? "bg-blue-400 cursor-not-allowed" : "bg-blue-600 hover:bg-blue-700 hover:shadow-lg hover:-translate-y-0.5"}`}
               >
                 {loading ? (
                   <span className="flex items-center justify-center gap-2">

@@ -27,6 +27,7 @@ export interface WorkModalConfig {
   submitLabel: string;
   projectTypes: string[];
   budgets: string[];
+  pricing: PricingTier[];
 }
 
 export interface MentorModalConfig {
@@ -35,6 +36,7 @@ export interface MentorModalConfig {
   submitLabel: string;
   mentoringAreas: string[];
   availability: string[];
+  pricing: PricingTier[];
 }
 
 export interface CoffeeModalConfig {
@@ -43,6 +45,7 @@ export interface CoffeeModalConfig {
   submitLabel: string;
   topics: string[];
   preferredTimes: string[];
+  pricing: PricingTier[];
 }
 
 export interface HelpModalConfig {
@@ -173,4 +176,12 @@ export interface TechCatchUpConfig {
   submitLabel: string;
   catchUpTopics: string[];
   groupSizes: string[];
+}
+
+export interface PricingTier {
+  tier: string;
+  price: string;
+  description: string;
+  features: string[];
+  recommended: boolean;
 }

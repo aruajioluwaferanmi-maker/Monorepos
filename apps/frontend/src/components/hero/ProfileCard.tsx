@@ -8,23 +8,24 @@ interface ProfileCardProps {
 
 const ProfileCard: React.FC<ProfileCardProps> = ({ profile, funFacts }) => {
   return (
-    <div className="flex flex-col gap-5 w-full max-w-sm">
-      {/* Work Profile Card */}
+    <div className="flex flex-col gap-4 w-full">
+      {/* Work Profile Card — full width */}
       <div
         className="
-        bg-white rounded-2xl shadow-xl p-8
-        flex flex-col items-center gap-5
+        bg-white rounded-2xl
+        shadow-[0_4px_40px_rgba(0,0,0,0.08)]
         border border-gray-100
-        hover:shadow-2xl transition-shadow duration-300
+        p-8 w-full
+        flex flex-col items-center gap-5
       "
       >
-        {/* Avatar */}
-        <div className="relative">
+        {/* Avatar + Badge */}
+        <div className="flex flex-col items-center gap-3">
           <img
             src={profile.image}
             alt={profile.name}
             className="
-              w-28 h-28 rounded-full
+              w-24 h-24 rounded-full
               object-cover
               border-4 border-blue-500
             "
@@ -37,20 +38,20 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ profile, funFacts }) => {
           />
           <span
             className="
-            absolute bottom-1 right-1
+            inline-flex items-center gap-1.5
             bg-green-500 text-white
             text-xs font-bold
-            px-2 py-0.5 rounded-full
-            border-2 border-white
+            px-3 py-1 rounded-full
           "
           >
-            ● {profile.badge}
+            <span className="w-1.5 h-1.5 bg-white rounded-full" />
+            {profile.badge}
           </span>
         </div>
 
         {/* Name + Role */}
         <div className="text-center">
-          <h3 className="text-xl font-extrabold text-gray-800">
+          <h3 className="text-lg font-extrabold text-gray-900 tracking-tight">
             {profile.name}
           </h3>
           <p className="text-blue-600 font-semibold text-sm mt-1">
@@ -61,11 +62,11 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ profile, funFacts }) => {
         {/* Divider */}
         <div className="w-full border-t border-gray-100" />
 
-        {/* Stats */}
-        <div className="flex justify-around w-full">
+        {/* Stats — spaced evenly across full width */}
+        <div className="grid grid-cols-3 w-full text-center gap-4">
           {profile.stats.map((stat) => (
-            <div key={stat.label} className="text-center">
-              <p className="text-2xl font-extrabold text-gray-800">
+            <div key={stat.label}>
+              <p className="text-2xl font-extrabold text-gray-900">
                 {stat.value}
               </p>
               <p className="text-xs text-gray-400 mt-0.5">{stat.label}</p>
@@ -74,37 +75,35 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ profile, funFacts }) => {
         </div>
       </div>
 
-      {/* Fun Facts Card */}
+      {/* Fun Facts — full width */}
       <div
         className="
-        bg-gradient-to-br from-blue-50 to-indigo-50
-        rounded-2xl p-6
+        bg-blue-50 rounded-2xl
         border border-blue-100
+        p-6 w-full
       "
       >
         <h4
           className="
           text-sm font-bold text-blue-700
-          mb-4 flex items-center gap-2
+          mb-3 flex items-center gap-2
         "
         >
           ✨ Fun Facts
         </h4>
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-2">
           {funFacts.map((fact, index) => (
             <div
               key={index}
               className="
-                flex items-start gap-3
-                bg-white rounded-xl p-3
-                border border-blue-100
-                shadow-sm
+                flex items-center gap-3
+                bg-white rounded-xl
+                px-4 py-3
+                border border-blue-50 shadow-sm
               "
             >
-              <span className="text-xl flex-shrink-0">{fact.emoji}</span>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                {fact.text}
-              </p>
+              <span className="text-lg flex-shrink-0">{fact.emoji}</span>
+              <p className="text-sm text-gray-600 leading-snug">{fact.text}</p>
             </div>
           ))}
         </div>

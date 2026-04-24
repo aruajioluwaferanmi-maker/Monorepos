@@ -50,6 +50,47 @@
         "$1,000 - $5,000",
         "$5,000 - $10,000",
         "$10,000+"
+      ],
+      "pricing": [
+        {
+          "tier": "Starter",
+          "price": "$999",
+          "description": "Perfect for small projects and MVPs",
+          "features": [
+            "Up to 5 pages or screens",
+            "Basic API integration",
+            "2 weeks delivery",
+            "1 revision round"
+          ],
+          "recommended": false
+        },
+        {
+          "tier": "Pro",
+          "price": "$2,999",
+          "description": "For growing products that need scale",
+          "features": [
+            "Up to 15 pages or screens",
+            "Full API & database integration",
+            "4 weeks delivery",
+            "3 revision rounds",
+            "Basic analytics setup"
+          ],
+          "recommended": true
+        },
+        {
+          "tier": "Premium",
+          "price": "$6,999",
+          "description": "End-to-end product delivery",
+          "features": [
+            "Unlimited pages or screens",
+            "Full stack development",
+            "8 weeks delivery",
+            "Unlimited revisions",
+            "Analytics & deployment",
+            "30 day post-launch support"
+          ],
+          "recommended": false
+        }
       ]
     },
     "mentorMe": {
@@ -69,6 +110,47 @@
         "Weekday evenings",
         "Weekends",
         "Flexible"
+      ],
+      "pricing": [
+        {
+          "tier": "Starter",
+          "price": "$149",
+          "description": "Get started with focused guidance",
+          "features": [
+            "2 sessions per month",
+            "30 mins per session",
+            "Email support",
+            "Resource recommendations"
+          ],
+          "recommended": false
+        },
+        {
+          "tier": "Pro",
+          "price": "$349",
+          "description": "Consistent growth and accountability",
+          "features": [
+            "4 sessions per month",
+            "60 mins per session",
+            "Priority email support",
+            "Code & project reviews",
+            "Custom learning plan"
+          ],
+          "recommended": true
+        },
+        {
+          "tier": "Premium",
+          "price": "$699",
+          "description": "Full mentorship and career acceleration",
+          "features": [
+            "8 sessions per month",
+            "60 mins per session",
+            "Unlimited async support",
+            "Full project collaboration",
+            "CV & portfolio review",
+            "Interview preparation"
+          ],
+          "recommended": false
+        }
       ]
     },
     "coffeeWithMe": {
@@ -88,6 +170,45 @@
         "Afternoon (12pm - 5pm)",
         "Evening (5pm - 9pm)",
         "Flexible"
+      ],
+      "pricing": [
+        {
+          "tier": "Starter",
+          "price": "$49",
+          "description": "One-off casual conversation",
+          "features": [
+            "30 min video call",
+            "One topic focus",
+            "Follow-up notes",
+            "One-time booking"
+          ],
+          "recommended": false
+        },
+        {
+          "tier": "Pro",
+          "price": "$129",
+          "description": "Regular catch ups for ongoing ideas",
+          "features": [
+            "2 x 45 min calls per month",
+            "Multiple topics",
+            "Follow-up action points",
+            "Async chat between sessions"
+          ],
+          "recommended": true
+        },
+        {
+          "tier": "Premium",
+          "price": "$249",
+          "description": "Deep collaboration and partnership",
+          "features": [
+            "4 x 60 min calls per month",
+            "Open topic agenda",
+            "Full async support",
+            "Network introductions",
+            "Collaborative project support"
+          ],
+          "recommended": false
+        }
       ]
     },
     "fifteenMinChat": {
