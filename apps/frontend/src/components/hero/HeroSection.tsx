@@ -37,8 +37,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   if (loading) {
     return (
       <section className="min-h-screen bg-white pt-16">
-        <div className="w-full max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="w-full max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
             <div className="flex flex-col gap-4 animate-pulse pt-16 lg:pt-20">
               <div className="h-5 bg-gray-100 rounded-full w-52" />
               <div className="h-14 bg-gray-100 rounded-xl w-full" />
@@ -51,8 +51,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({
               </div>
             </div>
             <div className="flex flex-col gap-4 pt-10 lg:pt-14">
-              <div className="h-80 bg-gray-100 rounded-2xl animate-pulse" />
-              <div className="h-48 bg-gray-100 rounded-2xl animate-pulse" />
+              <div className="h-80 bg-gray-100 rounded-2xl animate-pulse w-full" />
+              <div className="h-48 bg-gray-100 rounded-2xl animate-pulse w-full" />
             </div>
           </div>
         </div>
@@ -64,15 +64,15 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 
   return (
     <section className="min-h-screen bg-white pt-16">
-      <div className="w-full max-w-7xl mx-auto px-6">
+      <div className="w-full max-w-7xl mx-auto px-6 lg:px-12">
         <div
           className="
           grid grid-cols-1 lg:grid-cols-2
-          gap-12 lg:gap-16
+          gap-8 lg:gap-12
           items-start
         "
         >
-          {/* Left */}
+          {/* Left — Hero Text */}
           <div
             className="
             flex flex-col justify-start
@@ -92,12 +92,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             />
           </div>
 
-          {/* Right */}
+          {/* Right — Profile Card fills full column */}
           <div
             className="
             flex flex-col
             pt-10 lg:pt-14 pb-12
-            gap-5
+            gap-4 w-full
           "
           >
             <ProfileCard profile={config.profile} funFacts={config.funFacts} />
